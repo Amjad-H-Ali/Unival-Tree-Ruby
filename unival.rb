@@ -65,8 +65,10 @@ def count_unival root
 	if !root
 		return {:count => 0, :unival => true}
 	end
-	# RECURSIVELY COUNT UNIVALS ON LEFT SIDE
-	left_count, left_unival = count_unival(root).values_at(:count, :unival)	
+	# RECURSIVELY COUNT UNIVALS ON LEFT SIDE AND UNPACKAGE OBJECT
+	left_count, left_unival = count_unival(root.get_left.get_value).values_at(:count, :unival)	
+
+
 end	
 
 

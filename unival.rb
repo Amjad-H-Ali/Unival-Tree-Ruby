@@ -82,6 +82,10 @@ def count_unival root
 	if root.get_left and root.get_left.get_value != root.get_value
 		is_unival = false
 	end
+	# IF RIGHT CHILD EXIST AND VALUE DOES NOT EQUAL PARENT ROOT, NOT UNIVAL
+	if root.get_right and root.get_right.get_value != root.get_value
+		is_unival = false
+	end	
 
 
 end	

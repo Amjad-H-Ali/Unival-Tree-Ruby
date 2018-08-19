@@ -35,7 +35,7 @@ end
 
 root = Tree.new 5
 
-root.set_left Tree.new 1
+root.set_left Tree.new 5
 
 root.set_right Tree.new 5
 
@@ -46,17 +46,6 @@ root.get_left.set_right Tree.new 5
 root.get_right.set_right Tree.new 5
 
 
-p root.get_value
-
-p root.get_left.get_value
-
-p root.get_right.get_value
-
-p root.get_left.get_left.get_value
-
-p root.get_left.get_right.get_value
-
-p root.get_right.get_right.get_value
 
 # Wrapper function
 def how_many_univals root
@@ -105,6 +94,8 @@ def count_unival root
 
 end	
 
+
+p how_many_univals root # 6
 
 
 

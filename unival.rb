@@ -58,6 +58,15 @@ p root.get_left.get_right.get_value
 
 p root.get_right.get_right.get_value
 
+# Wrapper function
+def how_many_univals root
+	total_count, unival = count_unival(root).values_at(:count, :unival)
+
+	total_count
+end	
+
+
+
 
 def count_unival root
 
@@ -93,7 +102,6 @@ def count_unival root
 	else
 		return {:count => left_count + right_count, :unival => false}
 	end			
-
 
 end	
 

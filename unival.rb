@@ -85,7 +85,11 @@ def count_unival root
 	# IF RIGHT CHILD EXIST AND VALUE DOES NOT EQUAL PARENT ROOT, NOT UNIVAL
 	if root.get_right and root.get_right.get_value != root.get_value
 		is_unival = false
-	end	
+	end
+	# IF VARIABLE IS STILL TRUE, ADD UP ALL UNIVALS AND 1 TO CONSIDER TREE ITSELF
+	if is_unival
+		return {:count => left_count + right_count + 1, :unival => true}
+	end		
 
 
 end	

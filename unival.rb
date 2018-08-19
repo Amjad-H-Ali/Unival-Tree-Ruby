@@ -66,7 +66,11 @@ def count_unival root
 		return {:count => 0, :unival => true}
 	end
 	# RECURSIVELY COUNT UNIVALS ON LEFT SIDE AND UNPACKAGE OBJECT
-	left_count, left_unival = count_unival(root.get_left.get_value).values_at(:count, :unival)	
+	left_count, left_unival = count_unival(root.get_left).values_at(:count, :unival)
+
+	# RECURSIVELY COUNT UNIVALS ON RIGHT SIDE AND UNPACKAGE OBJECT
+	right_count, right_unival = count_unival(root.get_right).values_at(:count, :unival)
+
 
 
 end	

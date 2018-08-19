@@ -71,6 +71,12 @@ def count_unival root
 	# RECURSIVELY COUNT UNIVALS ON RIGHT SIDE AND UNPACKAGE OBJECT
 	right_count, right_unival = count_unival(root.get_right).values_at(:count, :unival)
 
+	# Assume Root is unival unless one of following conditions are true
+	is_unival = true
+
+	
+
+
 
 
 end	

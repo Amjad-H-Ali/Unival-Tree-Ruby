@@ -89,7 +89,10 @@ def count_unival root
 	# IF VARIABLE IS STILL TRUE, ADD UP ALL UNIVALS AND 1 TO CONSIDER TREE ITSELF
 	if is_unival
 		return {:count => left_count + right_count + 1, :unival => true}
-	end		
+	# ELSE ONLY ADD CHILD UNIVALS	
+	else
+		return {:count => left_count + right_count, :unival => false}
+	end			
 
 
 end	

@@ -74,8 +74,9 @@ def count_unival root
 	# Assume Root is unival unless one of following conditions are true
 	is_unival = true
 
-	
-
+	if !left_unival or !right_unival
+		is_unival = false
+	end	
 
 
 

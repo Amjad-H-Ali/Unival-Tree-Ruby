@@ -59,6 +59,13 @@ p root.get_left.get_right.get_value
 p root.get_right.get_right.get_value
 
 
+def count_unival root
+
+	if !root
+		return {:count => 0, :unival => true}
+	end	
+end	
+
 
 
 

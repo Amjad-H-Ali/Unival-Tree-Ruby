@@ -61,9 +61,12 @@ p root.get_right.get_right.get_value
 
 def count_unival root
 
+	# IF ROOT DOES NOT EXIST, RETURN 0 AND TRUE
 	if !root
 		return {:count => 0, :unival => true}
-	end	
+	end
+	# RECURSIVELY COUNT UNIVALS ON LEFT SIDE
+	left_count, left_unival = count_unival(root).values_at(:count, :unival)	
 end	
 
 
